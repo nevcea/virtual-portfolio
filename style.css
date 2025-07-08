@@ -1,0 +1,320 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #eef2f7;
+    color: #333;
+}
+
+header {
+    background: linear-gradient(to right, #4a69bd, #3f5aa5);
+    color: #fff;
+    padding: 1.5rem 0;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    letter-spacing: 1px;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0 0 0;
+    display: flex;
+    justify-content: center;
+}
+
+header nav ul li {
+    margin: 0 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    padding: 5px 10px;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #aed6f1;
+    border-bottom: 2px solid #aed6f1;
+}
+
+main {
+    padding: 30px;
+    max-width: 1200px;
+    margin: 30px auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+section {
+    margin-bottom: 50px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+section:last-of-type {
+    border-bottom: none;
+}
+
+h2 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.2em;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: #007bff;
+    border-radius: 2px;
+}
+
+.project-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.project-item {
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.project-item h3 {
+    color: #2c3e50;
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-size: 1.5em;
+}
+
+.project-item p {
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.view-detail-btn {
+    display: inline-block;
+    background: #007bff;
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.05em;
+    transition: background 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0,123,255,0.3);
+}
+
+.view-detail-btn:hover {
+    background: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,123,255,0.4);
+}
+
+.project-detail-item {
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 30px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.project-detail-item h3 {
+    color: #2c3e50;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 2.2em;
+    text-align: center;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.project-detail-item h3::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: #007bff;
+    border-radius: 2px;
+}
+
+.project-detail-item .detail-description {
+    font-size: 1.15em;
+    color: #444;
+    margin-bottom: 25px;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+.project-detail-item ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+.project-detail-item ul li {
+    background: #eef7ff;
+    margin-bottom: 10px;
+    padding: 12px 20px;
+    border-left: 6px solid #007bff;
+    border-radius: 6px;
+    font-size: 1.05em;
+    color: #3a5a7b;
+}
+
+.project-detail-item ul li strong {
+    color: #0056b3;
+}
+
+.project-images {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 35px;
+}
+
+.project-images img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+}
+
+.project-images img:hover {
+    transform: scale(1.02);
+}
+
+.back-to-list {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px dashed #ddd;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #e0e0e0;
+    margin: 60px 0;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    margin-top: 50px;
+    background: #2c3e50;
+    color: #eef2f7;
+    border-radius: 0 0 12px 12px;
+    box-shadow: 0 -4px 10px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+    header nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    header nav ul li {
+        margin: 0;
+    }
+    main {
+        padding: 20px;
+        margin: 20px auto;
+    }
+    h2 {
+        font-size: 1.8em;
+    }
+    .project-list {
+        grid-template-columns: 1fr;
+    }
+    .project-detail-item h3 {
+        font-size: 1.8em;
+    }
+    .project-detail-item .detail-description {
+        font-size: 1em;
+    }
+    .project-detail-item ul li {
+        padding: 10px 15px;
+        font-size: 0.95em;
+    }
+    .project-images {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.8em;
+    }
+    header nav ul li a {
+        font-size: 1em;
+    }
+    main {
+        padding: 15px;
+        margin: 15px auto;
+    }
+    h2 {
+        font-size: 1.6em;
+        margin-bottom: 25px;
+    }
+    .project-item {
+        padding: 18px;
+    }
+    .project-item h3 {
+        font-size: 1.3em;
+    }
+    .view-detail-btn {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+    .project-detail-item {
+        padding: 20px;
+    }
+    .project-detail-item h3 {
+        font-size: 1.6em;
+    }
+}
