@@ -1,0 +1,36 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+.w,
+.s,
+.d,
+.q {
+  margin: 10px;
+  width: 200px;
+  height: 100px;
+  background-color: #6495ED;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.w-ww,
+.s-ss,
+.d-dd,
+.q-qq {
+  color: black;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+  padding: 5px;
+  white-space: nowrap;
+}
