@@ -1,5 +1,5 @@
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Seg   oe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
@@ -8,7 +8,9 @@ body {
 }
 
 header {
-    background: linear-gradient(to right, #4a69bd, #3f5aa5);
+    position: relative;
+    background: linear-gradient(to right, rgba(74,105,189,0.6), rgba(63,90,165,0.6)),
+                url('images/profile.jpg') center/cover no-repeat;
     color: #fff;
     padding: 1.5rem 0;
     text-align: center;
@@ -16,12 +18,37 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
+    transition: padding 0.3s ease;
+    overflow: hidden;
+}
+
+header.shrink {
+    padding: 0.5rem 0;
+}
+
+header img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    margin-bottom: 1rem;
+}
+
+header.shrink img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 0.5rem;
 }
 
 header h1 {
     margin: 0;
     font-size: 2.5em;
     letter-spacing: 1px;
+    transition: font-size 0.3s ease;
+}
+
+header.shrink h1 {
+    font-size: 1.8em;
 }
 
 header nav ul {
